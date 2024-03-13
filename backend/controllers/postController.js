@@ -6,7 +6,7 @@ const getAllPosts = async (req, res) => {
     const posts = await Post.find();
     res.status(200).json(posts);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ error: error.message });
   }
 };
 
@@ -19,7 +19,7 @@ const createPost = async (req, res) => {
     res.status(201).json(newPost);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ error: error.message });
   }
 };
 
@@ -38,7 +38,7 @@ const getPost = async (req, res) => {
     res.status(200).json(post);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ error: error.message });
   }
 };
 
@@ -53,28 +53,29 @@ const deletePost = async (req, res) => {
     res.status(200).json({ message: "Post deleted successfully", post });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ error: error.message });
   }
 };
 
 const updatePost = async (req, res) => {
   const { id } = req.params;
-  const { title, text } = req.body;
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(404).json({ error: "No such post" });
   }
   try {
     const user_id = req.user._id;
-    const updatedPost = { title, text, _id: id };
-    await Post.findByIdAndUpdate(
+    const post =  await Post.findByIdAndUpdate(
       { _id: id, user_id: user_id },
       { ...req.body },
       { new: true }
     );
-    res.status(200).json(updatedPost);
+    if (!post) {
+      return res.status(404).json({ message: 'Fitness not found' });
+    }
+    res.status(200).json(post);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ error: error.message });
   }
 };
 module.exports = {

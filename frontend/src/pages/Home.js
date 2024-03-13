@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="posts_">
-        <h1>Posts Tracker</h1>
+        <h1>Feed</h1>
       </div>
       <div className="posts">
         <PostData />
