@@ -1,28 +1,11 @@
-require('dotenv').config()
-const express = require('express')
-const connectDB = require('./config/db')
-const cors = require('cors')
-const userRoute = require('./routes/userRoute')
-const postRoute = require('./routes/postRoute')
+const app = require('./app');
+const config = require('./utils/config');
+const logger = require('./utils/logger');
+const http = require('http');
 
 
+const server = http.createServer(app);
 
-
-const port = process.env.PORT || 4001
-
-connectDB();
-
-const app = express()
-
-
-app.use(cors());
-app.use(express.json());
-
-
-
-app.use('/api/users', userRoute);
-app.use('/api/posts', postRoute);
-
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`)
+server.listen(config.PORT, () => {
+  logger.info(`Server is running on http://localhost:${config.PORT}`)
 });
