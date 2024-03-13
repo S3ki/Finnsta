@@ -7,7 +7,7 @@
   --error: #e7195a;
 }
 body {
-  background: #f1f1f1;
+  background: #6a91f5cd;
   margin: 0;
   font-family: "Poppins";
 }
@@ -32,12 +32,29 @@ header a {
   margin: 0 auto;
 }
 /* Navbar */
+.container{
+
+}
 
 .container a {
   color: var(--primary);
   text-shadow: darkblue 2px 2px 2px;
+  display: flex;
+  gap: 10px;
+}
+.container img{
+ 
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 #000;
 }
 
+.logout-prof{
+  display: flex;
+  align-items: center;
+
+}
 
 /* homepage */
 .home {
@@ -45,7 +62,8 @@ header a {
 }
 .posts{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   font-size: 40px;
   padding: 10%;
 }
@@ -63,7 +81,7 @@ header a {
   justify-content: center;
   align-items: center;
   list-style: none;
-  border: 6px solid var(--primary);
+  border: 6px solid white;
   border-radius: 3px;
   padding: 50px;
 }
@@ -71,7 +89,7 @@ header a {
   font-size: 25px;
 }
 
-/* new workout form */
+/* new post form */
 label, input {
   display: block;
 }
@@ -83,6 +101,7 @@ input {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
+  font-size: 25px;
 }
 form button {
   background: var(--primary);
@@ -141,4 +160,27 @@ form.signup, form.login {
   font-size: 30px;
   color: #6bd7ec;
   text-shadow: #333 2px 2px 2px;
+}
+
+/* profile */
+
+.profilepic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+flex-direction: column;
+}
+
+.profilepic img {
+  width: 40%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 #000;
+}
+.profilepic button{
+  font-size: 25px;
+  background-color: #6bd7ec;
+  color: white;
+  border-radius: 10%;
+  padding: 20px;
+  box-shadow: white 2px 2px 2px;
 }

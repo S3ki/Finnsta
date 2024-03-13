@@ -40,18 +40,19 @@ const PostForm = () => {
   };
   return (
     <form className="create" onSubmit={handleSubmit}>
-      <h3>Add a New post</h3>
+      <h3>New post</h3>
 
-      <label>Title:</label>
+      <label>Title</label>
       <input
         type="text"
         onChange={(e) => setTitle(e.target.value)}
         value={title}
       />
 
-      <label>text:</label>
+      <label>:</label>
       <input
         type="text"
+        placeholder="Write your post here..."
         onChange={(e) => setText(e.target.value)}
         value={text}
       />

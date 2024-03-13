@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
+import Profile from "./pages/Profile";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -16,9 +17,14 @@ function App() {
         <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated}/>
         <div className="pages">
           <Routes>
+
+            <Route
+              path="/profile"
+              element={isAuthenticated ? <Profile /> : <Navigate to="/signup" />}
+            />
             <Route
               path="/"
-              element={isAuthenticated ? <Home /> : <Navigate to="/login" />}
+              element={isAuthenticated ? <Home /> : <Navigate to="/signup" />}
             />
             <Route
               path="/login"

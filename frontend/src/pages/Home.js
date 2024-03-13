@@ -8,8 +8,8 @@ const Home = () => {
         <h1>Feed</h1>
       </div>
       <div className="posts">
-        <PostData />
         <PostForm />
+        <PostData />
       </div>
     </div>
   );
