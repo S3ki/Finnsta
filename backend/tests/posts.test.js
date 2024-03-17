@@ -74,11 +74,6 @@ describe("Post API endpoint tests", () => {
         text: "This is the updated text for the test post."
       };
    
-   
-    // {
-    //     "title": "First Sample Post",
-    //     "text": "This is the text for the first sample post."
-    //   };
     await api
       .put("/api/posts/" + post._id)
       .set("Authorization", "bearer " + token)

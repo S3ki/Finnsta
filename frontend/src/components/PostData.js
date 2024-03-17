@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const PostData = () => {
     const [postsList, setPostsList] = useState([]);
@@ -24,7 +24,6 @@ const PostData = () => {
           const json = await response.json();
           setPostsList(json);
         } else {
-          // Handle error
         }
       };
       fetchData();
@@ -63,6 +62,9 @@ const PostData = () => {
               <br />
               <button onClick={() => handleDelete(posts._id)}>Delete</button>
               <br />
+              <Link to={`/update/${posts._id}`}>
+              <button>Update</button>
+             </Link>
             </li>
           ))}
         </ul>

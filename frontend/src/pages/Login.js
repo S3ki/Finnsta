@@ -21,6 +21,8 @@ const Login = ({ setIsAuthenticated }) => {
 
   return (
     <>
+    <div className="signupcont">
+ß
       <form className="signup" onSubmit={handleFormSubmit}>
         <h3>Login</h3>
         <label>Email address:</label>
@@ -29,6 +31,7 @@ const Login = ({ setIsAuthenticated }) => {
         <input {...password} />
         <button>Sign up</button>
       </form>
+    </div>
     </>
   );
 };

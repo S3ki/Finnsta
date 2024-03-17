@@ -6,6 +6,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
 import Profile from "./pages/Profile";
+import PostUpdate from "./components/PostUpdate";
+
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -22,6 +24,7 @@ function App() {
               path="/profile"
               element={isAuthenticated ? <Profile /> : <Navigate to="/signup" />}
             />
+            <Route path="/update/:id" element={<PostUpdate />} />
             <Route
               path="/"
               element={isAuthenticated ? <Home /> : <Navigate to="/signup" />}

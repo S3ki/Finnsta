@@ -3,6 +3,8 @@ const connectDB = require('./config/db')
 const cors = require('cors')
 const userRoute = require('./routes/userRoute')
 const postRoute = require('./routes/postRoute')
+const multer = require('multer')
+const path = require('path')
 require("dotenv").config();
 
 

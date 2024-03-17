@@ -49,7 +49,7 @@ const PostForm = () => {
         value={title}
       />
 
-      <label>:</label>
+      <label></label>
       <input
         type="text"
         placeholder="Write your post here..."

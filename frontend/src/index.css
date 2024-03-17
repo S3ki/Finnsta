@@ -84,6 +84,10 @@ header a {
   border: 6px solid white;
   border-radius: 3px;
   padding: 50px;
+  flex-direction: column;
+}
+.postlist{
+
 }
 .postslist span{
   font-size: 25px;
@@ -150,7 +154,15 @@ form.signup, form.login {
   padding: 20px;
   background: #fff;
   border-radius: 4px;
+
+}ß
+
+.signupcont{
+  display: flex;
+  justify-content: center;
 }
+
+
 
 /* Posts */
 

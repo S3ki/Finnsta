@@ -19,6 +19,7 @@ const PostProfile = () => {
             <img src={prof} alt="profilepic" />
             <h1>Profile</h1>
             <span>{email}</span>
+            <span>Followers: 20  Following: 2</span>
 
         <input type="file" onChange={e => setFile(e.target.files[0])}/>
         <button onClick={handleUpload}>Upload</button>
