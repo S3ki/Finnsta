@@ -1,5 +1,5 @@
 /* google font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
 
 /* layout */
 :root {
@@ -26,14 +26,13 @@ header a {
   color: #333;
   text-decoration: none;
 }
-.pages{
+.pages {
   max-width: 1400px;
   padding: 20px;
   margin: 0 auto;
 }
 /* Navbar */
-.container{
-
+.container {
 }
 
 .container a {
@@ -42,25 +41,22 @@ header a {
   display: flex;
   gap: 10px;
 }
-.container img{
- 
+.container img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   box-shadow: 0 0 10px 0 #000;
 }
 
-.logout-prof{
+.logout-prof {
   display: flex;
   align-items: center;
-
 }
 
 /* homepage */
 .home {
-
 }
-.posts{
+.posts {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -76,7 +72,7 @@ header a {
   border-radius: 4px;
   cursor: pointer;
 }
-.postslist{
+.postslist {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,16 +81,22 @@ header a {
   border-radius: 3px;
   padding: 50px;
   flex-direction: column;
+  text-align: center;
+  gap: 80px;
 }
-.postlist{
-
+li {
+  border: rgb(228, 229, 231) 2px solid;
+  width: 90%;
+  height: 90%;
+  padding: 40px;
 }
-.postslist span{
+.postslist span {
   font-size: 25px;
 }
 
 /* new post form */
-label, input {
+label,
+input {
   display: block;
 }
 input {
@@ -133,7 +135,8 @@ nav {
   display: flex;
   align-items: center;
 }
-nav a, nav button {
+nav a,
+nav button {
   margin-left: 10px;
 }
 nav button {
@@ -148,25 +151,24 @@ nav button {
 }
 
 /* auth forms */
-form.signup, form.login {
+form.signup,
+form.login {
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
   background: #fff;
   border-radius: 4px;
+  text-align: center;
+}
 
-}ß
-
-.signupcont{
+.signupcont {
   display: flex;
   justify-content: center;
 }
 
-
-
 /* Posts */
 
-.posts_{
+.posts_ {
   display: flex;
   justify-content: center;
   font-size: 30px;
@@ -176,11 +178,11 @@ form.signup, form.login {
 
 /* profile */
 
-.profilepic{
+.profilepic {
   display: flex;
   justify-content: center;
   align-items: center;
-flex-direction: column;
+  flex-direction: column;
 }
 
 .profilepic img {
@@ -188,7 +190,7 @@ flex-direction: column;
   border-radius: 50%;
   box-shadow: 0 0 10px 0 #000;
 }
-.profilepic button{
+.profilepic button {
   font-size: 25px;
   background-color: #6bd7ec;
   color: white;

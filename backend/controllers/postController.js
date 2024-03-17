@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 const Post = require("../models/postSchema");
 
 const getAllPosts = async (req, res) => {
+  const user_id = req.user._id;
   try {
-    const posts = await Post.find();
+    const posts = await Post.find({user_id});
     res.status(200).json(posts);
   } catch (error) {
     res.status(500).json({ error: error.message });
