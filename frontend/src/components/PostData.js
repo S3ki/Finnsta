@@ -45,6 +45,7 @@ const PostData = () => {
   
       if (response.ok) {
         setPostsList(postsList.filter((posts) => posts.id !== id));
+        window.location.reload();
       } else {
         console.log("error", id);
       }
