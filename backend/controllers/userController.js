@@ -4,7 +4,7 @@ jwt = require('jsonwebtoken');
 const createToken = (_id) => {
     return jwt.sign({ _id }, process.env.SECRET, { expiresIn: "1d" });
 }
-
+ 
 const loginUser = async (req, res) => {
 
     const { email, password } = req.body;
